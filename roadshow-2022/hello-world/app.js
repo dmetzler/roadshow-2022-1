@@ -22,7 +22,10 @@ exports.lambdaHandler = async (event, context) => {
             'body': JSON.stringify({
                 message: 'Hello Roadshow 2022',
                 // location: ret.data.trim()
-            })
+            }),
+            'headers': {
+                'Access-Control-Allow-Origin':'*',
+            }
         }
     } catch (err) {
         console.log(err);
